@@ -3,6 +3,9 @@ class NotesController < ApplicationController
 		puts "hello"
 		puts params[:message]
 		@message = params[:message]
+		@notes=Note.all
+		ap @notes
+		
 	end
 
 	def hello

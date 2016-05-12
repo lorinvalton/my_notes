@@ -3,3 +3,12 @@
 <%else%>
 <h1> Hello world</h1>
 <%end%>
+
+<% @notes.each do |note| %>
+	<div> <%=note.user%> </div>
+	<div> <%=note.content%> </div>
+<%end%>
+
+
+
+
