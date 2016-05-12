@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 root 'notes#index'  
 
-get 'hello', to: 'notes#hello'
+get 'hello/:message', to: 'notes#hello'
 
 get 'goodbye', to: 'notes#goodbye'
 
