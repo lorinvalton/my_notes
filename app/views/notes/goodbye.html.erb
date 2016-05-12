@@ -1,6 +1,15 @@
-<% if @message.present?%>
-<h1> goodbye <%=@message%></h1>
+<% if @message_goodbye.present?%>
+<h1> goodbye <%=@message_goodbye%></h1>
 <%else%>
 <h1> goodbye world</h1>
 <%end%>
-<%=link_to 'hello','/hello/toto'%>
+
+<%=form_tag("/goodbye", method:"get") do %>
+<%=text_field_tag(:message_goodbye)%>
+<%=submit_tag("send")%>
+<%end%>
+
+
+<%=link_to 'hello',hello_path(message: 'toto')%>
+
+

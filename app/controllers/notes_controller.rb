@@ -13,7 +13,8 @@ class NotesController < ApplicationController
 
 	def goodbye
 		puts "goodbye"
-		puts params[:message]
-		@message = params[:message]
+		puts params[:message_goodbye]
+		@message_goodbye = params[:message_goodbye]
+		puts params
 	end
 end
