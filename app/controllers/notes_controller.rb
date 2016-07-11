@@ -20,4 +20,17 @@ class NotesController < ApplicationController
 		@message_goodbye = params[:message_goodbye]
 		puts params
 	end
+
+	def new
+		
+	end
+
+	def create
+		ap params
+		note=Note.new
+		note.user= params[:note][:user]
+		note.content=params[:note][:content]
+		note.save
+		redirect_to notes_path
+	end
 end

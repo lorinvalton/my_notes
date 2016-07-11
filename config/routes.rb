@@ -1,9 +1,15 @@
+
 Rails.application.routes.draw do
 root 'notes#index'  
 
 get 'hello/:message', to: 'notes#hello', as: :hello
 
 get 'goodbye', to: 'notes#goodbye', as: :goodbye
+
+get 'notes/new', to: 'notes#new', as: :new_note
+get 'notes' , to: 'notes#index', as: :notes
+post 'notes', to: 'notes#create'
+
 
 # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

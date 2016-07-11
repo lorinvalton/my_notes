@@ -1,0 +1,10 @@
+<h1> Nouvelle note</h1>
+
+<%= form_tag(notes_path, method: "post") do %>
+<%= label_tag(:user, "nom:") %>
+  <%= text_field_tag("note[user]") %>
+  <%= label_tag(:content, "contenu:") %>
+  <%= text_field_tag("note[content]") %>
+  <%= submit_tag("creer") %>
+
+<% end %>
