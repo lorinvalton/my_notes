@@ -9,6 +9,8 @@ get 'goodbye', to: 'notes#goodbye', as: :goodbye
 get 'notes/new', to: 'notes#new', as: :new_note
 get 'notes' , to: 'notes#index', as: :notes
 post 'notes', to: 'notes#create'
+get 'notes/:id/edit' , to: 'notes#edit', as: :edit_note
+patch 'notes/:id' , to: 'notes#update' , as: :note
 
 
 # The priority is based upon order of creation: first created -> highest priority.

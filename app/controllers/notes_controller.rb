@@ -25,6 +25,22 @@ class NotesController < ApplicationController
 		@note=Note.new
 	end
 
+	def edit
+		puts params[:id]
+		@note=Note.find(params[:id])
+		ap @note
+	end
+
+    def update 
+		
+		note=Note.find(params[:id])
+		note.user= params[:note][:user]
+		note.content=params[:note][:content]
+		note.save
+		redirect_to notes_path
+		
+	end
+
 	def create
 		ap params
 		note=Note.new

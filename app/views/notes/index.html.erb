@@ -7,9 +7,11 @@
 <% @notes.each do |note| %>
 	<div> <%=note.user%> </div>
 	<div> <%=note.content%> </div>
+	<%=link_to 'Editer la  note',edit_note_path(note.id)%>
 <%end%>
 <br>
 <%=link_to 'Creer une nouvelle note',new_note_path()%>
+
 
 
 
